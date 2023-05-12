@@ -1,0 +1,72 @@
+/* CSS Styles for the Collapsible Menu */
+#myMenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#myMenu.show {
+  transform: translateX(0%);
+}
+
+#myMenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#myMenu a:hover {
+  color: #f1f1f1;
+}
+
+#myMenu .icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#myMenu .close-icon {
+  display: none;
+}
+
+#myMenu.show .close-icon {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #myMenu {
+    position: relative;
+    height: auto;
+    width: auto;
+    transform: translateX(0%);
+  }
+
+  #myMenu.show {
+    transform: translateX(0%);
+  }
+
+  #myMenu .icon {
+    display: none;
+  }
+
+  #myMenu .close-icon {
+    display: none;
+  }
+}
